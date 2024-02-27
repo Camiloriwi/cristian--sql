@@ -76,3 +76,5 @@ WHERE n.nota IS NULL;
 
 
 SELECT login FROM estudiantes WHERE nivel IN (1, 2, 3);
+
+SELECT id FROM estudiantes;
