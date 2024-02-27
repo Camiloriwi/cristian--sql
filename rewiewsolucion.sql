@@ -25,16 +25,16 @@ CREATE TABLE notas(
 INSERT INTO estudiantes (nombre, sexo, telefono) VALUES
     ('Ana', 'Mujer', '123-456-7890'),
     ('Carlos', 'Hombre', '987-654-3210'),
-    ('Jazmyn Denesik DVM','M','123-456-7890'),
-    ('Ursula Connelly', 'H', '123-8488'),
-    ('Thora Schmidt MD','M','123-0698'),
-    ('Kacie Gutmann','H', '9584635-00'),
-    ('Beau King','M', '76487487'),
-    ('Prof. Cornelius Langosh IV','1238547'),
-    ('Mrs. Rachael Ortiz PhD', 'H','89423847'),
-    ('Juana McLaughlin','M','289457194'),
-    ('Darlene Mertz', 'M', '4529825'),
-    ('Dr. Annetta Skiles PhD', '146784167'),
+    ('Jazmyn Denesik DVM','Mujer','123-456-7890'),
+    ('Ursula Connelly', 'Hombre', '123-8488'),
+    ('Thora Schmidt MD','Mujer','123-0698'),
+    ('Kacie Gutmann','Hombre', '9584635-00'),
+    ('Beau King','Mujer', '76487487'),
+    ('Cornelius Langosh','Hombre','1238547'),
+    ('Rachael Ortiz ', 'Hombre','89423847'),
+    ('Juana McLaughlin','Mujer','289457194'),
+    ('Darlene Mertz', 'Mujer', '4529825'),
+    ('Dr.Skiles','Hombre' ,'146784167')
 
 
 INSERT INTO materias (nombre) VALUES
@@ -75,6 +75,6 @@ LEFT JOIN notas n ON e.id = n.estudiante_id
 WHERE n.nota IS NULL;
 
 
-SELECT login FROM estudiantes WHERE nivel IN (1, 2, 3);
+SELECT id FROM notas WHERE nota IN (1, 2, 3);
 
 SELECT id FROM estudiantes;
