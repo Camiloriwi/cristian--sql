@@ -1,4 +1,4 @@
--- Active: 1708969769680@@bitszobq8xpddfdysjud-mysql.services.clever-cloud.com@3306
+-- Active: 1709062324862@@bqac1wxlc2pxma7ixogf-mysql.services.clever-cloud.com@3306@bqac1wxlc2pxma7ixogf
 
 CREATE TABLE estudiantes(
     id INT PRIMARY KEY AUTO_INCREMENT,
