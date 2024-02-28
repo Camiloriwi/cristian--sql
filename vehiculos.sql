@@ -1,4 +1,4 @@
--- Active: 1709125357477@@befuootzqnwbngbcmns7-mysql.services.clever-cloud.com@3306@befuootzqnwbngbcmns7
+-- Active: 1709141221323@@befuootzqnwbngbcmns7-mysql.services.clever-cloud.com@3306@befuootzqnwbngbcmns7
 
 
 create table marcas(
@@ -41,9 +41,28 @@ SELECT * FROM vehiculos  INNER JOIN  tipo_vehiculos INNER JOIN colores INNER JOI
 
 SELECT modelo,placa, color,marca,tipo_vehiculo FROM vehiculos INNER JOIN colores INNER JOIN marcas INNER JOIN tipo_vehiculos WHERE marcas.marca='BMW' AND colores.color='azul' OR colores.color='negro';
 
-/* SELECT DISTINCT tipo_vehiculo,color,modelo,placa FROM vehiculos WHERE ID =1 INNER JOIN  tipo_vehiculos WHERE ID=1  INNER JOIN colores WHERE ID=1  INNER JOIN marcas WHERE ID=1 ; */
+ SELECT DISTINCT tipo_vehiculo,color,modelo,placa,marca FROM vehiculos  INNER JOIN  tipo_vehiculos INNER JOIN colores   INNER JOIN marcas WHERE vehiculos.ID=1  AND tipo_vehiculos.ID=1 AND colores.ID=3 AND marcas.ID=3;
 
 
-SELECT DISTINCT * FROM vehiculos INNER JOIN  tipo_vehiculos WHERE tipo_vehiculos.tipo_vehiculo ='BMW' INNER JOIN colores  INNER JOIN marcas;
+SELECT DISTINCT * FROM vehiculos INNER JOIN  tipo_vehiculos  INNER JOIN colores  INNER JOIN marcas WHERE vehiculos.ID=1  AND tipo_vehiculos.ID=1 AND colores.ID=1 AND marcas.ID=1;
+SELECT DISTINCT modelo,placa,color,marca,tipo_vehiculo FROM vehiculos INNER JOIN  tipo_vehiculos  INNER JOIN colores  INNER JOIN marcas WHERE vehiculos.ID=1  AND tipo_vehiculos.ID=1 AND colores.ID=1 AND marcas.ID=1;
 
-/* consultas */
+SELECT DISTINCT modelo,placa,color,marca,tipo_vehiculo FROM vehiculos INNER JOIN  tipo_vehiculos  INNER JOIN colores  INNER JOIN marcas WHERE vehiculos.ID=2  AND tipo_vehiculos.ID=1 AND colores.ID=4 AND marcas.ID=1;
+
+
+SELECT COUNT(*) AS marcas FROM vehiculos v
+LEFT JOIN tipo_vehiculos t ON v.ID = t.ID
+WHERE t.tipo_vehiculo IS NOT NULL;
+
+
+SELECT COUNT(*) AS colores  FROM vehiculos v
+LEFT JOIN tipo_vehiculos t ON v.ID = t.ID
+WHERE t.tipo_vehiculo IS NOT NULL;
+
+-- git ADD
+
+
+
+
+
+
