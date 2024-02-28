@@ -20,6 +20,26 @@ Voy a insertar algunos datos en estas tablas y luego realizaré consultas utiliz
 
 Insertar datos en la tabla “estudiantes”:
  */
+ CREATE TABLE estudiantes(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(100),
+    sexo ENUM('Mujer', 'Hombre'),
+    telefono VARCHAR(20)
+);
+
+CREATE TABLE materias(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(100)
+);
+
+CREATE TABLE notas(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    estudiante_id INT,
+    materia_id INT,
+    nota DECIMAL(5, 2),
+    FOREIGN KEY (estudiante_id) REFERENCES estudiantes(id),
+    FOREIGN KEY (materia_id) REFERENCES materias(id)
+);
 
 INSERT INTO estudiantes (nombre, sexo, telefono) VALUES
     ('Laura', 'Mujer', '555-123-4567'),
