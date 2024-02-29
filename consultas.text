@@ -1,0 +1,47 @@
+consultas
+
+Modelo Entidad-Relación (E-R):
+
+Un modelo E-R es el diseño lógico de una base de datos que se puede implementar como una base de datos real.
+Describe las cosas de interés interrelacionadas en un dominio específico de conocimiento.
+Utiliza entidades (cosas de interés) y relaciones (conexiones entre entidades) para representar la estructura de datos.
+Ayuda a identificar las entidades y sus relaciones en un sistema.
+Se representa gráficamente con cuadros (entidades) conectados por líneas (relaciones).
+Es ampliamente utilizado en el diseño de bases de datos1.
+
+
+Diagrama Entidad-Relación (ERD):
+
+Un ERD es un tipo de diagrama de flujo que ilustra cómo las entidades se relacionan entre sí dentro de un sistema.
+Utiliza símbolos como rectángulos, diamantes y líneas para representar entidades, relaciones y atributos.
+Se usa para diseñar o depurar bases de datos relacionales en ingeniería de software, sistemas de información empresarial, educación e investigación2.
+Llave Primaria:
+
+Es un campo (o conjunto de campos) que identifica de manera única los registros dentro de una tabla.
+Garantiza que no haya duplicados en la información almacenada.
+Cada tabla debe tener su propia llave primaria para hacer referencia a los registros de manera inequívoca3.
+Llave Foránea:
+
+Es una limitación referencial entre dos tablas.
+Identifica una columna (o grupo de columnas) en una tabla hija que se refiere a una columna (o grupo de columnas) en una tabla maestra.
+Asegura que los valores en la tabla hija existan en la tabla maestra.
+Es esencial para la normalización de bases de datos y para establecer relaciones entre tablas4.
+
+
+Relación 1:1 (Uno a Uno):
+
+Ocurre cuando un registro en una tabla se relaciona con un único registro en otra tabla.
+Puede ser útil para separar columnas de filtro o agrupación de aquellas utilizadas para resumir filas de hechos5.
+
+
+Relación 1: (Uno a Muchos)*:
+
+Un registro en una tabla se relaciona con varios registros en otra tabla.
+Es común en relaciones maestro-detalle, como un estudiante con múltiples materias5.
+
+
+Relación : (Muchos a Muchos):
+
+Varios registros en una tabla se relacionan con varios registros en otra tabla.
+Se logra mediante una tabla intermedia que conecta las dos tablas principales.
+Por ejemplo, una tabla que relaciona estudiantes con materias5.
